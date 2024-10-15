@@ -6,6 +6,8 @@
     <title>Task2</title>
 </head>
 <body>
+
+
     <?php 
      echo"<br><br> PHP String and String Functions <br>";
 
@@ -242,17 +244,31 @@
 
     echo"<br><br> Question 5<br>";
 
-    function Display_traingles(){
-        $int = 1;
-        for ($i = 0 ; $i < 9 ; $i++){
-            for ($j = 0 ; $j < $i+1  ; $j++){
-                echo chr(65+$i) . " ";
-                $int++;
+    function Display_pattern() {
+        echo '<div style="text-align: center;">'; // Start the div with center alignment
+    
+        // First half of the pattern
+        for ($i = 1; $i <= 5; $i++) {
+            for ($j = 1; $j <= $i; $j++) {
+                echo chr(64 + $j) . " "; // Print the letters (A=65, so start from 64+1)
             }
-            echo " <br>";
+            echo "<br>"; // New line after each row
         }
+    
+        // Second half of the pattern
+        for ($i = 4; $i >= 1; $i--) {
+            for ($j = 1; $j <= $i; $j++) {
+                echo chr(64 + $j) . " "; // Continue the letters for the decreasing part
+            }
+            echo "<br>"; // New line after each row
+        }
+    
+        echo '</div>'; // Close the div
     }
-    Display_traingles();
+    
+    Display_pattern();
+    
+    
 
     echo"<br><br> Logical Statements and Operators  <br>";
     echo"<br><br> Question 1  <br>";
